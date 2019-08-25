@@ -23,7 +23,17 @@ function draw(){
 }
 
 function mousePressed(){
-	let r = random(10, 40);
+	let r = random(20, 50);
 	b = new Bubble(mouseX, mouseY, r);
 	bubbles.push(b);
+}
+
+function keyPressed(){
+	if (keyCode === 68){
+		for (let i = 0; i < bubbles.length; i++){
+			if (bubbles[i].contains(mouseX, mouseY)){
+				bubbles.splice(i,1);
+			}
+		}
+	}
 }

@@ -19,6 +19,17 @@ function draw(){
 		} else {
 			bubble.changeColor(0);
 		}
+		
+		let overlapping = false;
+		for (other of bubbles){
+			if (bubble !== other && bubble.overlapping(other)){
+				overlapping = true;
+			} 
+		}
+		if (overlapping){
+			bubble.changeColor('tomato');
+
+		}
 	}
 }
 

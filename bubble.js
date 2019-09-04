@@ -28,4 +28,9 @@ class Bubble{
 	changeColor(colorcito){
 		this.color = colorcito;
 	}
+
+	overlapping(other){
+		let d = dist(this.x, this.y, other.x, other.y);
+		return (d < this.r + other.r);
+	}
 }

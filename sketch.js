@@ -4,7 +4,7 @@ let bubble;
 
 
 function setup(){
-	createCanvas(600,600);
+	createCanvas(900,900);
 
 }
 
